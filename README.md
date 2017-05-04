@@ -50,6 +50,23 @@ Granted, there's a gazillion of libraries out there containing many a handy meth
               return v.toString(16);
           });
      }
+     
+     /**
+      * pads a number and returns the string
+      * @param {int} n - the integer to pad
+      * @param {int} a - total amount of characters in returned string
+      * @param {string} p - the character to use for padding
+      */
+     function pad(n, a, p) {
+         if (String(n).length >= a) {
+           return String(n);
+         }
+         var s = "";
+         for (var i = 0; i < a; i++) {
+           s += p;
+         }
+         return (s + String(n)).slice(-a);
+       }
 ```
 
 ### numbers
