@@ -192,7 +192,8 @@ Granted, there's a gazillion of libraries out there containing many a handy meth
 ```
      /** 
       * requestAnimationFrame polyfill
-      * https://gist.github.com/paulirish/1579671
+      * Based on: https://gist.github.com/paulirish/1579671
+      * Tweaked by: Bradley - https://gist.github.com/bradley
       */
      (function() {
        var lastTime = 0,
