@@ -110,7 +110,7 @@ Granted, there's a gazillion of libraries out there containing many a handy meth
       * (it's normalize, and than interpolate in a new range)
       */
      function map(value, min1, max1, min2, max2) {
-          return this.interpolate( this.normalize(value, min1, max1), min2, max2);
+          return interpolate( normalize(value, min1, max1), min2, max2);
      } 
 ```
 
