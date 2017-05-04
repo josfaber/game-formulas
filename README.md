@@ -188,10 +188,12 @@ Granted, there's a gazillion of libraries out there containing many a handy meth
      }
 ```
 
-## Timing
-
-### requestAnimationFrame polyfill
+## Animation
 ```
+     /** 
+      * requestAnimationFrame polyfill
+      * https://gist.github.com/paulirish/1579671
+      */
      (function() {
        var lastTime = 0,
          vendors = ['ms', 'moz', 'webkit', 'o'],
