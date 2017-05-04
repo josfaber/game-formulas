@@ -1,4 +1,4 @@
-Collection of handy dandy (javascript) formulas and algorithms for use in game development. They can mostly be ported to other languages easily.
+Evergrowing (and never finished) collection of handy dandy (javascript) formulas and algorithms for use in game development. They can mostly be ported to other languages easily.
 
 ### Why?
 Granted, there's a gazillion of libraries out there containing many a handy method. But many times I don't want a library. I just want a quick function or method. So this aims to be a big collection of them. Please contribute! 
