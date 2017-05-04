@@ -29,7 +29,7 @@ Granted, there's a gazillion of libraries out there containing many a handy meth
      }
 ```
 
-## data tools
+## Variables
 
 ### strings
 ```
@@ -136,5 +136,29 @@ Granted, there's a gazillion of libraries out there containing many a handy meth
                   return returnIndex ? i : true;
          }
           return false;
+     }
+```
+
+## DOM
+
+```
+     /**
+      * returns size of window in vanilla js
+      */
+     function windowsize(){
+          var w = 0;var h = 0;
+          if(!window.innerWidth){
+              if(!(document.documentElement.clientWidth == 0)){
+                  w = document.documentElement.clientWidth;
+                  h = document.documentElement.clientHeight;
+              } else {
+                  w = document.body.clientWidth;
+                  h = document.body.clientHeight;
+              }
+          } else {
+              w = window.innerWidth;
+              h = window.innerHeight;
+          }
+          return {width:w,height:h};
      }
 ```
