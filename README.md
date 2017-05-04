@@ -30,6 +30,7 @@ Granted, there's a gazillion of libraries out there containing many a handy meth
 ```
      /**
       * returns the number of possible combinations for given number of participants
+      * (e.g. 6 soccer teams have to play 15 matches to have everyone playing every other once)
       */
      function numCombinations(participants) {
           return 0.5 * participants * (participants-1);
