@@ -3,8 +3,6 @@ Evergrowing (and never finished) collection of handy dandy (javascript) formulas
 ### Why?
 Granted, there's a gazillion of libraries out there containing many a handy method. But many times I don't want a library. I just want a quick function or method. So this aims to be a big collection of them. Please contribute! 
 
-## Conversion / transcoding
-
 ## Position determination
 ```
      /**
