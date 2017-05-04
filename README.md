@@ -28,6 +28,15 @@ Granted, there's a gazillion of libraries out there containing many a handy meth
          }; 
      }
 ```
+## Outcomes
+```
+     /**
+      * returns the number of possible combinations for given number of participants
+      */
+     function numCombinations(participants) {
+          return 0.5 * participants * (participants-1);
+     }
+```
 
 ## Variables
 
