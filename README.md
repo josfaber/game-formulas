@@ -36,7 +36,7 @@ Granted, there's a gazillion of libraries out there containing many a handy meth
      /**
       * return a random, unique-ish id
       */
-     this.guid = function() {
+     function guid() {
           return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
               var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
               return v.toString(16);
@@ -57,35 +57,35 @@ Granted, there's a gazillion of libraries out there containing many a handy meth
      /**
       * return random float in range
       */
-     this.randFloat = function (min, max) {
+     function randFloat (min, max) {
          return Math.random() * (max - min) + min;
      }
      
      /**
       * degrees to radians
       */
-     this.degToRad = function(deg) {
+     function degToRad(deg) {
           return deg*(Math.PI/180);
      }
 
      /**
       * radians to degrees
       */
-     this.radToDeg = function(rad) {
+     function radToDeg(rad) {
           return rad/(Math.PI/180);
      }
 
      /**
       * returns the fraction behind the flaoting point of a float
       */
-     this.returnFloat = function(n) {
+     function returnFloat(n) {
           return n - Math.floor(n);
      }
 
      /**
       * returns a value between 0 and 1 that represents the given value in the given range
       */
-     this.normalize = function(value, minimum, maximum) {
+     function normalize(value, minimum, maximum) {
           return (value - minimum) / (maximum - minimum);
      }
 
@@ -93,7 +93,7 @@ Granted, there's a gazillion of libraries out there containing many a handy meth
       * returns the value in the given range for a representing normalized value
       * (it's normalize, but the other way around)
       */
-     this.interpolate = function(normValue, minimum, maximum) {
+     function interpolate (normValue, minimum, maximum) {
           return minimum + (maximum - minimum) * normValue;
      }    
      
@@ -101,7 +101,7 @@ Granted, there's a gazillion of libraries out there containing many a handy meth
       * returns the mapped value in range 2, given value 1 in range 1
       * (it's normalize, and than interpolate in a new range)
       */
-     this.map = function(value, min1, max1, min2, max2) {
+     function map(value, min1, max1, min2, max2) {
           return this.interpolate( this.normalize(value, min1, max1), min2, max2);
      } 
 ```
@@ -112,7 +112,7 @@ Granted, there's a gazillion of libraries out there containing many a handy meth
      /**
       * return randomized array
       */
-     this.randomized = function(arr) {
+     function randomized(arr) {
           var array = arr.slice(0);
           for (var i = array.length - 1; i > 0; i--) {
               var j = Math.floor(Math.random() * (i + 1));
@@ -127,7 +127,7 @@ Granted, there's a gazillion of libraries out there containing many a handy meth
      /**
       * check if value exists in array
       */
-     this.inArray = function(val, arr, returnIndex) {
+     function inArray(val, arr, returnIndex) {
           returnIndex = typeof returnIndex !== 'undefined' ? returnIndex : false;
 
           var len = arr.length;
