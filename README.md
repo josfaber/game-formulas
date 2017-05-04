@@ -6,8 +6,43 @@ Granted, there's a gazillion of libraries out there containing many a handy meth
 ## Conversion / transcoding
 
 ## Position determination
+```
+     /**
+      * returns the distance between two lat long coordinates
+      * (uses degToRad and radToDeg functions below)
+      */
+     function latlongdist(lat1, long1, lat2, long2) {
+         var theta = long1 - long2;
+         var miles = (Math.sin(degToRad(lat1)) * Math.sin(degToRad(lat2))) + (Math.cos(degToRad(lat1)) * Math.cos(degToRad(lat2)) * Math.cos(degToRad(theta)));
+         miles = radToDeg(Math.acos(miles)) * 60 * 1.1515;
+         var feet = miles * 5280;
+         var yards = feet / 3;
+         var km = miles * 1.609344;
+         var meters = km * 1000;
+         return {
+           'miles':miles,
+           'feet':feet,
+           'yards':yards,
+           'km':km,
+           'meters':meters
+         }; 
+     }
+```
 
 ## data tools
+
+### strings
+```
+     /**
+      * return a random, unique-ish id
+      */
+     this.guid = function() {
+          return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+              var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+              return v.toString(16);
+          });
+     }
+```
 
 ### numbers
 ```
